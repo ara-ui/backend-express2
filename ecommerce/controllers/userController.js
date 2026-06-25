@@ -1,13 +1,53 @@
+const {
+    sendResponse,
+    sendErrorResponse
+} = require("../utils/response");
+
 const getAllUsers = (req, res) => {
-    res.send("Fetching all users");
+    try {
+
+        return sendResponse(res, "Fetching all users", 200);
+
+    } catch (err) {
+
+        return sendErrorResponse(res, {
+            message: err.message,
+            statusCode: 500
+        });
+
+    }
 };
 
 const addUser = (req, res) => {
-    res.send("Adding a new user");
+    try {
+
+        return sendResponse(res, "Adding a new user", 201);
+
+    } catch (err) {
+
+        return sendErrorResponse(res, {
+            message: err.message,
+            statusCode: 500
+        });
+
+    }
 };
 
 const getUserById = (req, res) => {
-    res.send(`Fetching user with ID: ${req.params.id}`);
+    try {
+
+        const message = `Fetching user with ID: ${req.params.id}`;
+
+        return sendResponse(res, message, 200);
+        
+    } catch (err) {
+
+        return sendErrorResponse(res, {
+            message: err.message,
+            statusCode: 500
+        });
+
+    }
 };
 
 module.exports = {
