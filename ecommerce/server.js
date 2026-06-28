@@ -1,5 +1,5 @@
 const express = require("express");
-
+const connection =require("./db/db");
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");

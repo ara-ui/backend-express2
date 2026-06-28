@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 app.get("/api/products", (req, res) => {
-    res.sendFile(path.join(__dirname, "VIEW", "products.html"));
+    res.sendFile(path.join(__dirname, "view", "products.html"));
 });
 
 app.listen(3000, () => {

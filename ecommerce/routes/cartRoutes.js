@@ -7,6 +7,7 @@ const {
     addProductToCart
 } = require("../controllers/cartController");
 
+
 // GET /cart/:userId
 router.get("/:userId", getCartForUser);
 
